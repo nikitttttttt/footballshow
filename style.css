@@ -1,0 +1,27 @@
+body { 
+    margin: 0; background: #020617; color: #fff; font-family: sans-serif; 
+    display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; 
+}
+/* Центрируем все экраны строго посередине */
+.screen { 
+    position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    z-index: 100; display: flex; flex-direction: column; align-items: center; 
+    background: rgba(10,15,30,0.98); padding: 30px; border-radius: 15px; 
+    border: 2px solid #334155; box-shadow: 0 0 100px #000; min-width: 450px; 
+}
+.btn { padding: 12px 25px; margin: 10px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; background: #1e293b; color: #fff; transition: 0.2s; }
+.btn:hover { background: #334155; transform: scale(1.05); }
+.green { background: #10b981; } .purple { background: #8b5cf6; } .red { background: #ef4444; }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.t-card { padding: 8px; background: #0f172a; border: 1px solid #334155; border-radius: 4px; font-size: 10px; cursor: pointer; text-align: center; width: 85px; }
+.sel-p1 { border-color: #38bdf8; background: #0c4a6e; } .sel-p2 { border-color: #f43f5e; background: #881337; }
+.grids-wrapper { display: flex; gap: 30px; margin: 20px 0; }
+.table-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+.p-ui { display: flex; flex-direction: column; align-items: center; }
+.top-bar { display: flex; gap: 60px; align-items: center; margin-bottom: 10px; padding: 10px 40px; background: rgba(0,0,0,0.7); border-radius: 50px; }
+.score { font-size: 40px; font-weight: 900; color: #fbbf24; }
+.st-bg { width: 120px; height: 10px; background: #1e293b; border-radius: 5px; overflow: hidden; margin-top: 5px; }
+#sb1, #sb2 { height: 100%; transition: width 0.2s; }
+#sb1 { background: #38bdf8; width: 100%; } #sb2 { background: #f43f5e; width: 100%; }
+canvas { border: 6px solid #334155; border-radius: 12px; background: #14532d; }
+#matchLog { color: #94a3b8; font-size: 14px; min-height: 20px; }

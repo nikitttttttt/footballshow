@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Pro Football 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="ui-wrapper">
+        <div id="startMenu" class="screen">
+            <h1>FOOTBALL 2026</h1>
+            <div class="btn-group">
+                <button class="btn" onclick="setPlayerCount('bot')">1 ИГРОК (vs БОТ)</button>
+                <button class="btn" onclick="setPlayerCount('pvp')">2 ИГРОКА (PVP)</button>
+            </div>
+        </div>
+
+        <div id="teamMenu" class="screen" style="display:none">
+            <h2>ВЫБЕРИТЕ СБОРНЫЕ</h2>
+            <div class="grids-wrapper">
+                <div class="grid-box"><h3>P1</h3><div id="g1" class="grid"></div></div>
+                <div id="p2-box" class="grid-box"><h3>P2</h3><div id="g2" class="grid"></div></div>
+            </div>
+            <div class="btn-group">
+                <button class="btn green" onclick="startMode('tournament')">ТУРНИР</button>
+                <button class="btn purple" onclick="startMode('quick')">БЫСТРЫЙ МАТЧ</button>
+            </div>
+        </div>
+
+        <div id="tourneyMenu" class="screen" style="display:none">
+            <h2 id="tourneyTitle">ГРУППОВОЙ ЭТАП</h2>
+            <div id="tableContent" class="table-grid"></div>
+            <div id="matchLog"></div>
+            <button class="btn" onclick="processNext()">ИГРАТЬ МАТЧ</button>
+        </div>
+
+        <div id="pauseMenu" class="screen" style="display:none">
+            <h1>ПАУЗА</h1>
+            <button class="btn" onclick="togglePause()">ПРОДОЛЖИТЬ (ESC)</button>
+            <button class="btn red" onclick="location.reload()">ВЫЙТИ В МЕНЮ</button>
+        </div>
+
+        <div id="winScreen" class="screen" style="display:none">
+            <h1 id="winStatus">МАТЧ ОКОНЧЕН</h1>
+            <h2 id="winnerName">...</h2>
+            <button class="btn" onclick="location.reload()">В ГЛАВНОЕ МЕНЮ</button>
+        </div>
+    </div>
+
+    <div id="game-container" style="display:none">
+        <div class="top-bar">
+            <div class="p-ui"><span id="tName1">P1</span><div class="st-bg"><div id="sb1"></div></div></div>
+            <div class="score"><span id="sc1">0</span> : <span id="sc2">0</span></div>
+            <div class="p-ui"><span id="tName2">P2</span><div class="st-bg"><div id="sb2"></div></div></div>
+        </div>
+        <canvas id="field" width="1000" height="600"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
